@@ -1,0 +1,45 @@
+body
+{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+main
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin: 0;
+    height: 100vh;
+
+}
+main div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input
+{
+    transform: rotate(270deg);
+}
+#principal
+{
+    grid-column: 1/4;
+    background-color: rgb(255, 255, 0);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+#red
+{
+    background-color: red;
+}
+#green
+{
+    background-color: green;
+}
+#blue
+{
+    background-color: blue;
+}
