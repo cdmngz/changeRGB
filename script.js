@@ -1,25 +1,24 @@
-var r = 255;
-var g = 255;
-var b = 0;
-var principal = document.getElementById("principal");
-
-principal.innerHTML = "rgb( " + r + ", " + g + ", " + b + " );";
-
-document.getElementById("range1").oninput = function() {
-    r = this.value;
-    var thergb = "rgb(" + r + "," + g + "," + b + ")"; 
-    principal.innerHTML = thergb;
-	principal.style.backgroundColor=thergb;
+document.getElementsByTagName("input")[0].oninput = function() {
+    //Obtiene valor de inputRange No1 y lo inserta en span No1
+    document.getElementsByTagName("span")[0].innerHTML = this.value;
+    colorear();
 }
-document.getElementById("range2").oninput = function() {
-    g = this.value;
-    var thergb = "rgb(" + r + "," + g + "," + b + ")"; 
-    principal.innerHTML = thergb;
-	principal.style.backgroundColor=thergb;
+
+document.getElementsByTagName("input")[1].oninput = function() {
+    //Obtiene valor de inputRange No2 y lo inserta en span No2
+    document.getElementsByTagName("span")[1].innerHTML = this.value;
+    colorear();
 }
-document.getElementById("range3").oninput = function() {
-    b = this.value;
-    var thergb = "rgb(" + r + "," + g + "," + b + ")"; 
-    principal.innerHTML = thergb;
-	principal.style.backgroundColor=thergb;
+
+document.getElementsByTagName("input")[2].oninput = function() {
+    //Obtiene valor de inputRange No3 y lo inserta en span No3
+    document.getElementsByTagName("span")[2].innerHTML = this.value;
+    colorear();
+}
+
+function colorear(){
+    //Obtiene texto de la etiqueta A
+    var textoEnEtiquetaA = document.getElementsByTagName("a")[0].textContent;
+    //Asigna el texto de la etiqueta A en el style del div principal
+    document.getElementById("principal").style.backgroundColor = textoEnEtiquetaA;
 }
