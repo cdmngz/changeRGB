@@ -16,9 +16,11 @@ document.getElementsByTagName("input")[2].oninput = function() {
     colorear();
 }
 
-function colorear(){
+function colorear() {
     //Obtiene texto de la etiqueta A
     var textoEnEtiquetaA = document.getElementsByTagName("a")[0].textContent;
+    textoEnEtiquetaA = (textoEnEtiquetaA.replace(/ /g,'')).toLocaleLowerCase();
+    console.log(textoEnEtiquetaA);
     //Asigna el texto de la etiqueta A en el style del div principal
     document.getElementById("principal").style.backgroundColor = textoEnEtiquetaA;
 }

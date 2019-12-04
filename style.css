@@ -1,9 +1,12 @@
+@font-face {
+    font-family: QuiteMagical;
+    src: url("Quite Magical - TTF.ttf");
+}
 body
 {
     height: 100vh;
     width: 100%;
     margin: 0;
-    background-color: black;
 }
 main
 {
@@ -11,7 +14,7 @@ main
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     margin: 0;
-    height: 100vh;
+    height: 100%;
 }
 main div
 {
@@ -24,17 +27,16 @@ main div
 {
     grid-column: 1/4;
     background-color: rgb(255, 255, 0);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    text-align: center;
 }
-a
+#principal a
 {
     background-color: rgb(255,255,255);
-    padding: 30px;
-    border-radius: 20px;
-    border: 6px solid black;
+    border: 5px solid black;
+    border-radius: 12px;
+    font-family: QuiteMagical;
+    font-size: 3em;
     font-weight: bold;
+    padding: 30px;
 }
 #principal a span:nth-of-type(1) {
     color: red;
@@ -60,8 +62,6 @@ a
 input[type=range]
 {
     -webkit-appearance: none;
-    width: 40%;
-    transform: rotate(270deg);
 }
 input[type=range]:focus
 {
@@ -69,17 +69,29 @@ input[type=range]:focus
 }
 input[type=range]::-webkit-slider-thumb
 {
-    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     height: 36px;
     width: 16px;
-    border-radius: 3px;
-    background-color: white;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.7);
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -14px;
 }
 input[type=range]::-webkit-slider-runnable-track
 {
-    height: 8.4px;
-    background: rgba(255,255,255,0.3);
+    height: 8px;
+    background-color: rgba(255,255,255,0.6);
+}
+@media (min-width: 700px) {
+    #principal a
+    {
+        font-size: 4em;
+    }
+}
+@media (max-width: 450px) {
+    #principal a
+    {
+        font-size: 2em;
+    }
 }
